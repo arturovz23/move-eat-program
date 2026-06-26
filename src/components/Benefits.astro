@@ -1,0 +1,58 @@
+---
+const benefits = [
+  {
+    number: '01',
+    title: 'Plan de alimentación semanal',
+    description: 'Menús completos para las 4 semanas con desayuno, comida y cena. Ingredientes disponibles en Sonora, alto en proteína y carbohidrato complejo.',
+  },
+  {
+    number: '02',
+    title: 'Rutinas de ejercicio en casa',
+    description: 'Videos de entrenamiento adaptados para crossfit, hyrox y funcional. Sin necesidad de gym, puedes entrenar donde sea.',
+  },
+  {
+    number: '03',
+    title: 'Seguimiento quincenal',
+    description: 'Check-in cada dos semanas con fotos de progreso y medidas para que veas tu avance real y hagas ajustes si es necesario.',
+  },
+  {
+    number: '04',
+    title: 'Lista de compras por semana',
+    description: 'Todo organizado por categoría para que tu visita al super sea rápida y sin estrés.',
+  },
+  {
+    number: '05',
+    title: 'Colaciones y aguas frescas',
+    description: 'Opciones de snacks pre y post entreno, además de aguas frescas naturales para mantenerte hidratado.',
+  },
+  {
+    number: '06',
+    title: 'Guía de sustituciones',
+    description: 'Alternativas para cada ingrediente por si no lo encuentras, para que nunca tengas excusas.',
+  },
+];
+---
+
+<section id="program" class="py-24 bg-cream">
+  <div class="max-w-5xl mx-auto px-6">
+
+    <div class="text-center mb-16">
+      <p class="section-label mb-4">Qué incluye</p>
+      <h2 class="font-serif text-4xl md:text-5xl font-medium text-olive-dark leading-tight">
+        Todo lo que necesitas,<br/>
+        <em class="font-normal text-sand">en un solo programa</em>
+      </h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-sand-light">
+      {benefits.map((b) => (
+        <div class="bg-cream p-8 hover:bg-white transition-colors duration-200">
+          <p class="font-serif text-4xl font-light text-sand mb-4">{b.number}</p>
+          <h3 class="font-serif text-xl font-medium text-olive-dark mb-3">{b.title}</h3>
+          <p class="font-sans font-light text-sm text-olive-mid leading-relaxed">{b.description}</p>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

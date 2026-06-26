@@ -1,0 +1,60 @@
+---
+// Sustituir LINK_DE_PAGO por el link real de MercadoPago cuando esté listo
+const PAYMENT_LINK = 'https://mpago.la/LINK_DE_PAGO';
+---
+
+<section id="pricing" class="py-24 bg-white">
+  <div class="max-w-5xl mx-auto px-6">
+
+    <div class="text-center mb-16">
+      <p class="section-label mb-4">Inversión</p>
+      <h2 class="font-serif text-4xl md:text-5xl font-medium text-olive-dark leading-tight">
+        Un precio justo para<br/>
+        <em class="font-normal text-sand">resultados reales</em>
+      </h2>
+    </div>
+
+    <div class="max-w-md mx-auto border border-sand-light">
+      <!-- Header -->
+      <div class="bg-olive-dark p-8 text-center">
+        <p class="font-sans text-xs font-bold tracking-widest uppercase text-sand mb-3">Move Eat Program</p>
+        <p class="font-serif text-6xl font-medium text-cream mb-1">$499</p>
+        <p class="font-sans text-sm font-light text-olive-sage">MXN · pago único</p>
+      </div>
+
+      <!-- Lista de lo que incluye -->
+      <div class="p-8 bg-cream space-y-4">
+        {[
+          'Plan de alimentación completo — 4 semanas',
+          'Rutinas de ejercicio en video',
+          'Lista de compras semanal',
+          'Guía de medición a distancia',
+          'Check-in de seguimiento quincenal',
+          'Colaciones y aguas frescas naturales',
+          'Guía de sustituciones de ingredientes',
+          'Acceso inmediato al comprar',
+        ].map((item) => (
+          <div class="flex items-start gap-3">
+            <div class="w-1 h-1 rounded-full bg-sand mt-2 shrink-0"></div>
+            <p class="font-sans font-light text-sm text-olive-mid">{item}</p>
+          </div>
+        ))}
+
+        <div class="pt-4">
+          <a
+            href={PAYMENT_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-primary w-full text-center block"
+          >
+            Quiero empezar ahora
+          </a>
+          <p class="font-sans text-xs text-olive-mid text-center mt-4 font-light">
+            Pago seguro vía MercadoPago · Acceso inmediato
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

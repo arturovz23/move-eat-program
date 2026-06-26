@@ -1,0 +1,44 @@
+---
+const profiles = [
+  {
+    title: 'Crossfit',
+    description: 'Nutrición diseñada para soportar la intensidad del crossfit. Energía sostenida, recuperación muscular y rendimiento.',
+  },
+  {
+    title: 'Hyrox',
+    description: 'Carbohidratos estratégicos para resistencia y fuerza. Alimentación que acompaña entrenamientos de alta demanda cardiovascular.',
+  },
+  {
+    title: 'Funcional',
+    description: 'Para quienes entrenan fuera del gym convencional. Un plan adaptable a tu nivel y estilo de entrenamiento.',
+  },
+];
+---
+
+<section class="py-24 bg-cream">
+  <div class="max-w-5xl mx-auto px-6">
+
+    <div class="text-center mb-16">
+      <p class="section-label mb-4">Para quién es</p>
+      <h2 class="font-serif text-4xl md:text-5xl font-medium text-olive-dark leading-tight">
+        Diseñado para quienes<br/>
+        <em class="font-normal text-sand">entrenan en serio</em>
+      </h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      {profiles.map((p) => (
+        <div class="border-t-2 border-sand pt-6">
+          <h3 class="font-serif text-2xl font-medium text-olive-dark mb-3">{p.title}</h3>
+          <p class="font-sans font-light text-sm text-olive-mid leading-relaxed">{p.description}</p>
+        </div>
+      ))}
+    </div>
+
+    <!-- Separador ornamental -->
+    <div class="divider mt-16">
+      <div class="w-1.5 h-1.5 rounded-full bg-sand"></div>
+    </div>
+
+  </div>
+</section>

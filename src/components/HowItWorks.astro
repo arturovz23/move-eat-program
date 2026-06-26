@@ -1,0 +1,52 @@
+---
+const steps = [
+  {
+    step: '1',
+    title: 'Te inscribes',
+    description: 'Realizas tu pago y en minutos recibes acceso al programa completo en tu correo.',
+  },
+  {
+    step: '2',
+    title: 'Te mides',
+    description: 'Sigues la guía de medición inicial: fotos de progreso y medidas con cinta métrica. Simple y desde tu casa.',
+  },
+  {
+    step: '3',
+    title: 'Sigues el plan',
+    description: 'Semana a semana tienes tus menús, rutinas y lista de compras lista. Solo sigue el programa.',
+  },
+  {
+    step: '4',
+    title: 'Ves resultados',
+    description: 'A las 2 semanas haces tu primer check-in. A las 4 semanas comparas y ves tu transformación.',
+  },
+];
+---
+
+<section class="py-24 bg-olive-dark">
+  <div class="max-w-5xl mx-auto px-6">
+
+    <div class="text-center mb-16">
+      <p class="font-sans text-xs font-bold tracking-widest uppercase text-sand mb-4">Cómo funciona</p>
+      <h2 class="font-serif text-4xl md:text-5xl font-medium text-cream leading-tight">
+        Tan simple como<br/>
+        <em class="font-normal text-sand">seguir el proceso</em>
+      </h2>
+    </div>
+
+    <div class="grid md:grid-cols-4 gap-8">
+      {steps.map((s) => (
+        <div class="text-center overflow-hidden">
+          <!-- Número con línea decorativa -->
+          <div class="mb-6 flex flex-col items-center">
+            <span class="font-serif text-7xl font-medium text-sand leading-none">{s.step}</span>
+            <div class="w-8 h-px bg-sand/50 mt-2"></div>
+          </div>
+          <h3 class="font-serif text-xl font-medium text-cream mb-3">{s.title}</h3>
+          <p class="font-sans font-light text-sm text-olive-sage leading-relaxed">{s.description}</p>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>
