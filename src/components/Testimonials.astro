@@ -1,0 +1,66 @@
+---
+const testimonials = [
+  {
+    name: 'Carlos M.',
+    sport: 'Crossfit · Navojoa',
+    quote: 'Llegué a mi primera competencia con más energía que nunca. El programa me enseñó a comer para rendir, no solo para bajar de peso.',
+    result: 'Mejoró su tiempo en WOD en 4 semanas',
+  },
+  {
+    name: 'Daniela R.',
+    sport: 'Entrenamiento Funcional · Hermosillo',
+    quote: 'Por fin un plan con ingredientes que sí consigo aquí en Sonora. Fácil de seguir y con resultados reales desde la primera semana.',
+    result: '-4 kg de grasa, +masa muscular',
+  },
+  {
+    name: 'Roberto S.',
+    sport: 'Hyrox · Ciudad Obregón',
+    quote: 'Combiné el programa de nutrición con las rutinas de Mike y la diferencia en mi recuperación fue brutal. Totalmente recomendado para quienes compiten.',
+    result: 'Mejor recuperación y rendimiento en competencia',
+  },
+];
+---
+
+<section class="py-24 bg-white">
+  <div class="max-w-5xl mx-auto px-6">
+
+    <div class="text-center mb-16">
+      <p class="section-label mb-4">Resultados reales</p>
+      <h2 class="font-serif text-4xl md:text-5xl font-medium text-olive-dark leading-tight">
+        Lo que dicen quienes<br/>
+        <em class="font-normal text-sand">ya lo vivieron</em>
+      </h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      {testimonials.map((t) => (
+        <div class="flex flex-col">
+          <!-- Imagen placeholder antes/después -->
+          <div class="grid grid-cols-2 gap-1 mb-6">
+            <div class="aspect-square bg-olive-dark/5 flex items-center justify-center">
+              <p class="font-sans text-[9px] text-olive-mid tracking-widest uppercase text-center">Antes</p>
+            </div>
+            <div class="aspect-square bg-olive-dark/5 flex items-center justify-center">
+              <p class="font-sans text-[9px] text-olive-mid tracking-widest uppercase text-center">Después</p>
+            </div>
+          </div>
+
+          <!-- Testimonio -->
+          <div class="flex-1 border-t-2 border-sand pt-6">
+            <p class="font-serif text-lg font-normal italic text-olive-dark leading-relaxed mb-4">
+              "{t.quote}"
+            </p>
+            <div class="mt-auto">
+              <p class="font-sans text-sm font-bold text-olive-dark">{t.name}</p>
+              <p class="font-sans text-xs text-olive-mid">{t.sport}</p>
+              <div class="mt-3 inline-block bg-cream px-3 py-1">
+                <p class="font-sans text-[10px] font-bold tracking-wide uppercase text-sand">{t.result}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

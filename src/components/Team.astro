@@ -1,0 +1,79 @@
+---
+const team = [
+  {
+    name: 'Alexa Mendivil',
+    roles: ['Nutrióloga Certificada', 'Coach de Nutrición Deportiva'],
+    bio: 'Certificada en Nutrición Deportiva e ISAK Nivel 1. Diseña planes de alimentación personalizados para atletas que buscan rendimiento real, recuperación óptima y resultados sostenibles.',
+    credentials: [
+      'Nutrición Deportiva certificada',
+      'ISAK Nivel 1',
+      'Diplomado en Nutrición Clínica',
+    ],
+  },
+  {
+    name: 'Mike',
+    roles: ['Coach de Entrenamiento', 'Especialista en Crossfit & Hyrox'],
+    bio: 'Entrenador especializado en crossfit, hyrox y entrenamiento funcional. Diseña las rutinas del programa para que el ejercicio y la nutrición trabajen juntos hacia el mismo objetivo.',
+    credentials: [
+      'Coach certificado en entrenamiento funcional',
+      'Especialista en Crossfit & Hyrox',
+      'Entrenamiento para competencia',
+    ],
+  },
+];
+---
+
+<section class="py-24 bg-cream">
+  <div class="max-w-5xl mx-auto px-6">
+
+    <div class="text-center mb-16">
+      <p class="section-label mb-4">El equipo</p>
+      <h2 class="font-serif text-4xl md:text-5xl font-medium text-olive-dark leading-tight">
+        Nutrición y entrenamiento,<br/>
+        <em class="font-normal text-sand">en el mismo programa</em>
+      </h2>
+      <p class="font-sans font-light text-olive-mid mt-4 max-w-lg mx-auto">
+        Por primera vez tienes a una nutrióloga deportiva y a un coach de entrenamiento diseñando un programa pensado para atletas como tú.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      {team.map((member) => (
+        <div class="border border-sand-light">
+          <!-- Imagen placeholder -->
+          <div class="aspect-[4/3] bg-olive-dark/5 flex items-center justify-center">
+            <p class="font-sans text-xs text-olive-mid tracking-widest uppercase">Foto de {member.name}</p>
+          </div>
+
+          <!-- Info -->
+          <div class="p-8">
+            <div class="mb-4">
+              <h3 class="font-serif text-2xl font-medium text-olive-dark mb-2">{member.name}</h3>
+              <div class="flex flex-wrap gap-2">
+                {member.roles.map((role) => (
+                  <span class="font-sans text-[10px] font-bold tracking-widest uppercase bg-olive-dark text-sand px-3 py-1">
+                    {role}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <p class="font-sans font-light text-sm text-olive-mid leading-relaxed mb-6">
+              {member.bio}
+            </p>
+
+            <div class="space-y-2 pt-4 border-t border-sand-light">
+              {member.credentials.map((c) => (
+                <div class="flex items-center gap-3">
+                  <div class="w-1 h-1 rounded-full bg-sand shrink-0"></div>
+                  <p class="font-sans text-xs text-olive-dark">{c}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

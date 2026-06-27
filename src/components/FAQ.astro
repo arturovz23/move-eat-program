@@ -1,0 +1,74 @@
+---
+const faqs = [
+  {
+    q: '¿El programa es personalizado?',
+    a: 'El programa está diseñado para atletas de crossfit, hyrox y entrenamiento funcional con ajustes de porciones para hombres y mujeres. No es un plan individual, pero incluye una guía de equivalencias para adaptar los ingredientes según tus gustos y necesidades.',
+  },
+  {
+    q: '¿Funciona si vivo fuera de Sonora?',
+    a: 'Sí. Aunque el programa usa ingredientes típicos del noroeste de México, incluye una guía de sustituciones para que puedas adaptarlo con lo que encuentres en tu ciudad.',
+  },
+  {
+    q: '¿Necesito tener gym para seguir el programa?',
+    a: 'No. Las rutinas de Mike están diseñadas para hacerse en casa. Si tienes acceso a un gym o box de crossfit, también puedes aprovecharlas ahí.',
+  },
+  {
+    q: '¿Cómo recibo el programa después de pagar?',
+    a: 'Inmediatamente después de tu pago recibes acceso completo al programa en tu correo. Sin esperas.',
+  },
+  {
+    q: '¿Puedo seguir el programa si estoy preparándome para una competencia?',
+    a: 'Sí, el programa está pensado exactamente para eso. La nutrición está diseñada para sostener el rendimiento en crossfit e hyrox, no solo para perder peso.',
+  },
+  {
+    q: '¿Hay seguimiento después de comprar?',
+    a: 'Sí. Incluye un check-in quincenal donde envías tus fotos de progreso y medidas para monitorear tus avances durante las 4 semanas.',
+  },
+  {
+    q: '¿Se hacen reembolsos?',
+    a: 'Al ser un producto digital, no se realizan reembolsos una vez entregado el acceso. Si tuviste algún problema con tu compra, escríbenos y lo resolvemos.',
+  },
+];
+---
+
+<section class="py-24 bg-cream">
+  <div class="max-w-3xl mx-auto px-6">
+
+    <div class="text-center mb-16">
+      <p class="section-label mb-4">Preguntas frecuentes</p>
+      <h2 class="font-serif text-4xl md:text-5xl font-medium text-olive-dark leading-tight">
+        Todo lo que necesitas<br/>
+        <em class="font-normal text-sand">saber antes de empezar</em>
+      </h2>
+    </div>
+
+    <div class="space-y-px">
+      {faqs.map((faq, i) => (
+        <details class="group bg-white">
+          <summary class="flex items-center justify-between gap-4 p-6 cursor-pointer list-none">
+            <span class="font-serif text-lg font-medium text-olive-dark">{faq.q}</span>
+            <span class="font-serif text-2xl text-sand shrink-0 transition-transform duration-200 group-open:rotate-45">+</span>
+          </summary>
+          <div class="px-6 pb-6">
+            <p class="font-sans font-light text-sm text-olive-mid leading-relaxed">{faq.a}</p>
+          </div>
+        </details>
+      ))}
+    </div>
+
+    <!-- CTA final -->
+    <div class="text-center mt-16 pt-12 border-t border-sand-light">
+      <p class="font-serif text-2xl font-medium text-olive-dark mb-2">¿Tienes otra pregunta?</p>
+      <p class="font-sans font-light text-sm text-olive-mid mb-6">Escríbenos directamente por Instagram.</p>
+      <a
+        href="https://www.instagram.com/_nutrialexa"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-secondary inline-block"
+      >
+        Escribir a @_nutrialexa
+      </a>
+    </div>
+
+  </div>
+</section>
